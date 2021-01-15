@@ -1,0 +1,756 @@
+﻿<!doctype html>
+<html lang="fr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  
+  <title>Configuration du suivi des événements Adobe Analytics</title>
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">    <link data-react-helmet="true" rel="preload" as="font" href="https://files.brightcove.com/fonts/balto/baltoweb-ultra.eot" type="font/eot">
+  <link data-react-helmet="true" rel="preload" as="font" href="https://files.brightcove.com/fonts/balto/baltoweb-ultra.woff" type="font/woff">
+  <link data-react-helmet="true" rel="preload" as="font" href="https://files.brightcove.com/fonts/balto/baltoweb-super.eot" type="font/eot">
+  <link data-react-helmet="true" rel="preload" as="font" href="https://files.brightcove.com/fonts/balto/baltoweb-super.woff" type="font/woff">
+  <link data-react-helmet="true" rel="preload" as="font" href="https://files.brightcove.com/fonts/balto/baltoweb-black.eot" type="font/eot">
+  <link data-react-helmet="true" rel="preload" as="font" href="https://files.brightcove.com/fonts/balto/baltoweb-black.woff" type="font/woff">
+  <link data-react-helmet="true" rel="preload" as="font" href="https://files.brightcove.com/fonts/balto/baltoweb-bold.eot" type="font/eot">
+  <link data-react-helmet="true" rel="preload" as="font" href="https://files.brightcove.com/fonts/balto/baltoweb-bold.woff" type="font/woff">
+  <link data-react-helmet="true" rel="preload" as="font" href="https://files.brightcove.com/fonts/balto/baltoweb-medium.eot" type="font/eot">
+  <link data-react-helmet="true" rel="preload" as="font" href="https://files.brightcove.com/fonts/balto/baltoweb-medium.woff" type="font/woff">
+  <link data-react-helmet="true" rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500&amp;display=swap">
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://support.brightcove.com/site-assets/css/site/prism.css">
+  <link rel="stylesheet" href="https://support.brightcove.com/site-assets/css/site/styles.css">
+  <link rel="stylesheet" href="https://support.brightcove.com/site-assets/css/site/landing-page.css">
+  <link rel="stylesheet" href="https://support.brightcove.com/site-assets/css/site/tabs.css">
+  <link rel="stylesheet" href="/assets/css/local.css">
+  <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/381443caa8.js" crossorigin="anonymous"></script>
+  <script src="https://support.brightcove.com/site-assets/js/site/google-analytics.js"></script>
+  <script src="/assets/js/sajari-head.js"></script>
+</head>
+
+<body class="body">
+
+<header>
+  <div class="div-header">
+    <a href="/"><span class="product-logo" style="font-family:'Balto Web','Public Sans';font-size:2em;font-weight:bold;">CAMPAGNE BRIGHTCOVE<sup>™</sup></span></a>
+<!-- GTranslate: https://gtranslate.io/ -->
+<select onchange="doGTranslate(this);"><option value="">Sélectionner la langue</option><option value="en|en" translate="No">English</option><option value="en|zh-TW" translate="No">繁體中文</option><option value="en|fr" translate="No">Français</option><option value="en|de" translate="No">Deutsche</option><option value="en|ja" translate="No">日本語</option><option value="en|ko" translate="No">한국어</option><option value="en|es" translate="No">Español</option></select>
+
+<script>
+/* <![CDATA[ */
+function doGTranslate(lang_pair) {if(lang_pair.value)lang_pair=lang_pair.value;if(lang_pair=='')return;var lang=lang_pair.split('|')[1];var plang=location.hostname.split('.')[0];if(plang.length !=2 && plang.toLowerCase() != 'zh-cn' && plang.toLowerCase() != 'zh-tw')plang='en';location.href=location.protocol+'//'+(lang == 'en' ? '' : lang+'.')+location.hostname.replace('www.', '').replace(RegExp('^' + plang + '\\.'), '')+location.pathname+location.search;}
+/* ]]> */
+</script>
+
+    <select id="site_select" class="bcls-select" style="margin-right: 1rem;">
+      <option value="">Autres documents Brightcove</option>
+      
+        
+          <option value="https://support.brightcove.com">Accueil Documentation</option>
+        
+      
+        
+          <option value="https://audience.support.brightcove.com">Audience de Brightcove</option>
+        
+      
+        
+          <option value="https://beacon.support.brightcove.com">Balise Brightcove</option>
+        
+      
+        
+          <option value="https://campaign.support.brightcove.com">Campagne Brightcove</option>
+        
+      
+        
+          <option value="https://engage.support.brightcove.com">Brightcove Engagez</option>
+        
+      
+        
+          <option value="https://live.support.brightcove.com">Brightcove Live</option>
+        
+      
+        
+          <option value="https://gallery.support.brightcove.com">Brightcove Gallery</option>
+        
+      
+        
+          <option value="https://ssai.support.brightcove.com">Brightcove SSAI</option>
+        
+      
+        
+          <option value="https://social.support.brightcove.com">Brightcove Social</option>
+        
+      
+        
+          <option value="https://studio.support.brightcove.com">Video Cloud Studio</option>
+        
+      
+        
+          <option value="https://player.support.brightcove.com">Développement du joueur Brightcove</option>
+        
+      
+        
+          <option value="https://apis.support.brightcove.com">API de la plate-forme Video Cloud</option>
+        
+      
+        
+          <option value="https://sdks.support.brightcove.com">SDK pour périphériques Video Cloud</option>
+        
+      
+        
+          <option value="https://integrations.support.brightcove.com">Intégrations et connecteurs CMS</option>
+        
+      
+        
+          <option value="https://general.support.brightcove.com">Informations générales sur Video Cloud</option>
+        
+      
+        
+          <option value="https://zencoder.support.brightcove.com">Zencoder</option>
+        
+      
+    </select>
+
+
+    <span class="secondary-nav"><a href="https://supportportal.brightcove.com/s/login/?"><img src="https://support.brightcove.com/site-assets/images/site/support.png" alt="assistance"/> Contactez le support</a> <span style="vertical-align: top;margin-left:1em;margin-right:1em;">|</span> <a href="https://status.brightcove.com/"><img src="https://support.brightcove.com/site-assets/images/site/status.png" alt="état du système"/> État du système</a></span> <br/>
+    
+  </div>
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb arr-right">
+      
+      <li class="breadcrumb-item"><a href="/">Accueil</a></li>
+      
+      
+      
+      <li class="breadcrumb-item"><a href="/admin/">Administration des comptes</a></li>
+      
+      <li class="breadcrumb-item active" aria-current="page">Configuration du suivi des événements Adobe Analytics</li>
+    </ol>
+  </nav>
+</header>
+<div class="container">
+    <div class="row">
+      <div class="col-sm-3 left-side-bar">
+        <nav class="sidenav" id="side_nav">
+          
+            
+            <h5><a href="/index.html">Accueil</a></h5>
+            
+          
+            
+              <h5 class="submenu-header"><a href="/get-started/index.html">Mise en route <strong>+</strong></a></h5>
+              <ul class="sidenav-submenu" style="display:none;">
+                
+                  
+                    <li><a href="/get-started/brightcove-campaign-training-videos.html">Vidéos de formation de campagne</a></li>
+                  
+                
+                  
+                    <li><a href="/get-started/getting-started-brightcove-campaign.html">Commencer avec la campagne Brightcove</a></li>
+                  
+                
+                  
+                    <li><a href="/get-started/getting-started-brightcove-campaign-trial.html">Démarrer avec votre essai de campagne Brightcove</a></li>
+                  
+                
+                  
+                    <li><a href="/get-started/overview-video-content-types.html">Vue d'ensemble des types de contenu vidéo</a></li>
+                  
+                
+                  
+                    <li><a href="/get-started/uploading-publishing-your-first-video.html">Téléchargement et publication de votre première vidéo</a></li>
+                  
+                
+              </ul>
+            
+          
+            
+              <h5 class="submenu-header"><a href="/videos/index.html">Gestion des vidéos <strong>+</strong></a></h5>
+              <ul class="sidenav-submenu" style="display:none;">
+                
+                  
+                    <li><a href="/videos/adding-text-tracks-to-a-video.html">Ajout de pistes de texte</a></li>
+                  
+                
+                  
+                    <li><a href="/videos/capturing-poster-and-thumbnail-images.html">Capturer des images d'affiche et de vignettes</a></li>
+                  
+                
+                  
+                    <li><a href="/videos/driving-video-views-email.html">Conduite des vues vidéo par e-mail</a></li>
+                  
+                
+                  
+                    <li><a href="/videos/editing-video-properties.html">Modification des propriétés de la vidéo</a></li>
+                  
+                
+                  
+                    <li><a href="/videos/managing-videos.html">Gestion des vidéos</a></li>
+                  
+                
+                  
+                    <li><a href="/videos/publishing-videos.html">Publication de vidéos</a></li>
+                  
+                
+                  
+                    <li><a href="/videos/how-to-search-for-videos.html">Rechercher des vidéos</a></li>
+                  
+                
+                  
+                    <li><a href="/videos/uploading-poster-and-thumbnail-images.html">Téléchargement d'affiches et d'images miniatures</a></li>
+                  
+                
+                  
+                    <li><a href="/videos/uploading-videos.html">Téléchargement de vidéos</a></li>
+                  
+                
+                  
+                    <li><a href="/videos/working-with-shared-videos.html">Utilisation des vidéos partagées</a></li>
+                  
+                
+              </ul>
+            
+          
+            
+              <h5 class="submenu-header"><a href="/dashboard/index.html">Consulter le tableau de bord <strong>+</strong></a></h5>
+              <ul class="sidenav-submenu" style="display:none;">
+                
+                  
+                    <li><a href="/dashboard/dashboard-overview.html">Vue d'ensemble des</a></li>
+                  
+                
+                  
+                    <li><a href="/dashboard/reviewing-adv-dashboard.html">Consulter le tableau de bord avancé</a></li>
+                  
+                
+                  
+                    <li><a href="/dashboard/reviewing-basic-dashboard.html">Consulter le tableau de bord de base</a></li>
+                  
+                
+              </ul>
+            
+          
+            
+              <h5 class="submenu-header"><a href="/analytics/index.html">Vérification des analyses <strong>+</strong></a></h5>
+              <ul class="sidenav-submenu" style="display:none;">
+                
+                  
+                    <li><a href="/analytics/how-vbs-calculated.html">Comment calculer le score de benchmark vidéo</a></li>
+                  
+                
+                  
+                    <li><a href="/analytics/reviewing-video-analytics.html">Vérification de l'analyse vidéo</a></li>
+                  
+                
+                  
+                    <li><a href="/analytics/using-hud.html">Utilisation de l'extension Chrome d'affichage tête haute</a></li>
+                  
+                
+              </ul>
+            
+          
+            
+              <h5 class="submenu-header"><a href="/admin/index.html">Administration des comptes <strong>+</strong></a></h5>
+              <ul class="sidenav-submenu" style="display:none;">
+                
+                  
+                    <li><a href="/admin/configuring-adobe-analytics-event-tracking.html">Configuration d'Adobe Analytics</a></li>
+                  
+                
+                  
+                    <li><a href="/admin/configuring-google-analytics-event-tracking.html">Configuration de Google Analytics</a></li>
+                  
+                
+                  
+                    <li><a href="/admin/configuring-map-connections.html">Configuration des connexions MAP</a></li>
+                  
+                
+                  
+                    <li><a href="/admin/connecting-to-hubspot-client-side-api.html">Connexion à HubSpot (API côté client)</a></li>
+                  
+                
+                  
+                    <li><a href="/admin/connecting-to-hubspot-rest-api.html">Connexion à HubSpot (API REST)</a></li>
+                  
+                
+                  
+                    <li><a href="/admin/connecting-to-marketo-munchkin.html">Connexion à Marketo (Munchkin)</a></li>
+                  
+                
+                  
+                    <li><a href="/admin/connecting-to-marketo-rest-api.html">Connexion à Marketo (API REST)</a></li>
+                  
+                
+                  
+                    <li><a href="/admin/connecting-to-oracle-eloqua.html">Connexion à Oracle Eloqua</a></li>
+                  
+                
+                  
+                    <li><a href="/admin/connecting-to-salesforce.html">Connexion à Salesforce</a></li>
+                  
+                
+                  
+                    <li><a href="/admin/creating-salesforce-object-pardot.html">Création d'un objet Salesforce pour Pardot</a></li>
+                  
+                
+                  
+                    <li><a href="/admin/creating-lead-forms.html">Création de formulaires de prospectes</a></li>
+                  
+                
+                  
+                    <li><a href="/admin/creating-lead-forms-hubspot.html">Création de formulaires de prospect dans HubSpot</a></li>
+                  
+                
+                  
+                    <li><a href="/admin/creating-lead-forms-marketo.html">Création de formulaires de prospecte dans Marketo</a></li>
+                  
+                
+                  
+                    <li><a href="/admin/creating-lead-forms-oracle-eloqua.html">Création de formulaires de prospecte dans Oracle Eloqua</a></li>
+                  
+                
+                  
+                    <li><a href="/admin/creating-lead-forms-salesforce.html">Création de formulaires de prospecs dans Salesforce</a></li>
+                  
+                
+                  
+                    <li><a href="/admin/managing-account-information.html">Gestion des informations de compte</a></li>
+                  
+                
+                  
+                    <li><a href="/admin/managing-account-settings.html">Gestion des paramètres du compte</a></li>
+                  
+                
+                  
+                    <li><a href="/admin/managing-media-sharing-settings.html">Gestion des paramètres de partage de médias</a></li>
+                  
+                
+                  
+                    <li><a href="/admin/managing-profile-information.html">Gestion des informations de profil</a></li>
+                  
+                
+                  
+                    <li><a href="/admin/managing-users.html">Gestion des utilisateurs</a></li>
+                  
+                
+                  
+                    <li><a href="/admin/styling-players.html">Styling Joueurs</a></li>
+                  
+                
+                  
+                    <li><a href="/admin/reviewing-player-event-data-in-google-analytics.html">Vérification des données d'événements du joueur dans Google Analytics</a></li>
+                  
+                
+                  
+                    <li><a href="/admin/viewing-billing-information.html">Affichage des informations de facturation</a></li>
+                  
+                
+              </ul>
+            
+          
+            
+              <h5 class="submenu-header"><a href="/release-notes/index.html">Notes de mise à jour <strong>+</strong></a></h5>
+              <ul class="sidenav-submenu" style="display:none;">
+                
+                  
+                    <li><a href="/release-notes/2020.html">2020</a></li>
+                  
+                
+              </ul>
+            
+          
+            
+              <h5 class="submenu-header"><a href="/support/index.html">Support <strong>+</strong></a></h5>
+              <ul class="sidenav-submenu" style="display:none;">
+                
+                  
+                    <li><a href="/support/brightcove-answer.html">Réponses Brightcove</a></li>
+                  
+                
+                  
+                    <li><a href="/support/viewing-brightcove-system-status-page.html">Affichage de la page État du système Brightcove</a></li>
+                  
+                
+                  
+                    <li><a href="/support/contact-sales.html">Contacter les ventes</a></li>
+                  
+                
+                  
+                    <li><a href="/support/opening-case-with-brightcove-support.html">Ouverture d'un dossier de support</a></li>
+                  
+                
+              </ul>
+            
+          
+      </nav>
+    </div>
+    <div class="col-lg-7" style="background-color: white;color: #333333;margin-top: -1em;margin-bottom: -1em;padding-bottom:1em;">
+  <!-- bootstrap layout -->
+
+<p id="bc_veggie_burger_wrapper" style="display: none;"><img id="bc_veggie_burger" src="/assets/images/feather/menu.svg" alt="Menu de navigation"/></p>
+<ul id="in_prod_nav" class="pager" style="display: none;">
+  <li><a href="#"><img src="/assets/images/feather/chevron-left.svg" alt="retour"/></a></li>
+  <li>&nbsp;&nbsp;&nbsp;&nbsp;Documentation de balise&nbsp;&nbsp;&nbsp;&nbsp;</li>
+  <li><a href="#"><img src="/assets/images/feather/chevron-right.svg" alt="vers l'avant"/></a></li>
+</ul>
+
+<!-- search bar -->
+<div id="nav-search-box" style="margin-top: 1rem;"></div>
+<!-- in-page navigation for narrow screens -->
+<details class="centered-inpage-nav" id="centered_inpage_nav">
+  <summary><h6 class="toc">Contenu de la page</h6></summary>
+  <nav id="centered_toc"></nav>
+  <ul id="centered_in_page_toc" class="list-none"></ul>
+</details>
+<!-- open in new tab/window -->
+<a id="open_new_tab" href="#" target="_blank" style="display: none;"><img src="/assets/images/feather/external-link.svg" alt="ouvrir dans un nouvel onglet" style="margin-top:4em;"/></a>
+
+
+
+  
+    
+
+
+<article class="bcls-article">
+  <h1>Configuration du suivi des événements Adobe Analytics</h1>
+  <summary>Dans cette rubrique, vous apprendrez à configurer le suivi des événements Adobe Analytics.</summary>
+  <section class="bcls-section">
+    <p>Brightcove Campaign ™ offre la possibilité d'intégrer facilement les lecteurs Brightcove à Adobe Analytics. Cela permet d'envoyer des données de suivi d'événements à un compte Adobe Analytics à des fins de création de rapports.</p>
+    <aside class="bcls-aside bcls-aside--information language-editable">Remarque : Chaque système d'analyse recueille les données et calcule les mesures différemment. Les analyses qui s'affichent dans Brightcove Campaign ne seront pas identiques à celles qui apparaissent dans Adobe Analytics.</aside>
+    <p>Pour configurer l'intégration, les tâches suivantes doivent être effectuées :</p>
+    <ul>
+      <li><a href="#review_events">Passez en revue les événements disponibles pour suivre</a></li>
+      <li><a href="#add_events">Créer des événements de réussite personnalisés dans Adobe Analytics</a></li>
+      <li><a href="#review_parameters">Passez en revue les paramètres disponibles pour capturer</a></li>
+      <li><a href="#add_parameters">Créer des variables de trafic dans Adobe Analytics</a></li>
+      <li><a href="#enable">Activer l'intégration dans le module Players</a></li>
+      <li><a href="#configure_page">Configurer la page pour collecter des données</a></li>
+    </ul>
+    <p>Notez que lorsque l'intégration est configurée, seules les analyses des événements vidéo sont transmises à Adobe Analytics.</p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="review_events">Examiner les événements disponibles pour suivre</h2>
+    <p>Chaque événement Brightcove qui fera l'objet d'un suivi doit être créé en tant qu'événement de réussite personnalisé dans Adobe Analytics. Les ID d'événement d'Adobe seront ensuite utilisés dans le module Players. Cela permet aux données d'événements Brightcove d'être transmises aux événements Adobe Success. Passez en revue la liste des événements ci-dessous pour déterminer quels événements vous souhaitez suivre.</p>
+    <ul>
+      <li><strong>Player Load (bcvideo_player_load)</strong> - Envoyé lorsqu'un lecteur a été chargé et est prêt pour la lecture</li>
+      <li><strong>Impression vidéo (bcvideo_video_impression)</strong> - Envoyé lorsqu'une vidéo a été chargée dans un lecteur et est prête pour la lecture</li>
+      <li><strong>Vidéo View (bcvideo_video_view)</strong> - Envoyé lorsqu'une vidéo a commencé à lire par lecture automatique ou en raison de l'interaction de l'utilisateur</li>
+      <li><strong>Video Engagement (bcvideo_video_engagement)</strong> - Un utilisateur a regardé une plage de secondes de la chronologie d'une vidéo. Cet événement est un battement de cœur pour le suivi de l'engagement vidéo et sera probablement envoyé plusieurs fois pendant la lecture, en fonction de l'interaction de l'utilisateur et de la durée de la vidéo.</li>
+      <li><strong>Demande de lecture (bcvideo_play_request)</strong> - Envoyé lorsque la lecture est lancée soit par l'utilisateur en cliquant expressément sur le bouton de lecture, soit automatiquement lorsque la plate-forme déclenche la lecture dans un scénario de lecture automatique</li>
+      <li><strong>Ad Start (bcvideo_ad_start)</strong> - Envoyé lorsque le contrôle est remis à un agent publicitaire par la plate-forme de lecture</li>
+      <li><strong>Ad End (bcvideo_ad_end)</strong> - Envoi lorsque le contrôle est remis de l'agent publicitaire à la plate-forme de lecture</li>
+      <li><strong>Error (bcvideo_error)</strong>- Envoyé lorsque des erreurs fatales qui perturbent l'expérience de lecture sont rencontrées</li>
+      <li><strong>Vidéo terminée (bcvideo_video_complete)</strong> - Envoyé lorsque la lecture vidéo se termine</li>
+    </ul>
+  </section>
+  <section class="bcls-section">
+    <h2 id="add_events">Ajout d'événements de réussite personnalisés à Adobe Analytics</h2>
+    <p>Une fois que vous avez déterminé les événements à suivre, les événements de réussite personnalisés doivent être créés dans Adobe Analytics. Pour créer des événements de réussite personnalisés dans Adobe Analytics, procédez comme suit.</p>
+    <ol class="bcls-tasklist-restart" style="--s:1">
+      <li>Connectez-vous à votre compte Adobe Analytics.</li>
+      <li>Sélectionnez une suite de rapports avec qui vous souhaitez travailler ou créez-en une nouvelle (<strong>Suites de &gt; rapports d'administration</strong>).</li>
+      <li>Cliquez sur <strong>Modifier les paramètres Événements de &gt; succès de &gt; conversion</strong>.
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/admin/adobe-success-events.png"/></figure>
+      </li>
+      <li>Cliquez sur <strong>Ajouter un nouveau</strong>.</li>
+      <li>Entrez les informations relatives à l'événement :
+        <ul>
+          <li><strong>Nom</strong> - Vous <strong>devez</strong> utiliser le nom <strong>bcvideo-</strong> indiqué dans la section précédente</li>
+          <li><strong>Type</strong> - Réglez sur <strong>Compteur</strong></li>
+          <li><strong>Description</strong> - Ajouter une description significative</li>
+        </ul>
+      </li>
+      <li>Créez un nouvel événement de réussite pour chaque événement que vous souhaitez suivre. Cliquez sur <strong>Enregistrer</strong> pour enregistrer les événements.</li>
+    </ol>
+    <p>L'image ci-dessous montre les événements de réussite personnalisés créés (event7 - event15) pour chacun des événements Brightcove.</p>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/admin/adobe-success-events-list.png"/></figure>
+  </section>
+  <section class="bcls-section">
+    <h2 id="review_parameters">Examen des paramètres disponibles pour capturer</h2>
+    <p>Les paramètres portent des données supplémentaires et sont transmis avec des événements. Chaque paramètre Brightcove qui sera enregistré doit être créé en tant que variable de trafic dans Adobe Analytics. Les noms de paramètres seront ensuite utilisés lors de la configuration de l'intégration dans Brightcove Campaign. Cela permet de transmettre les paramètres Brightcove à Adobe Traffic Variables. Passez en revue la liste des paramètres ci-dessous pour déterminer ceux que vous souhaitez capturer.</p>
+    <ul>
+      <li><strong>ID de compte&nbsp;(bcvideo_account) </strong>- Nom du compte Brightcove</li>
+      <li><strong>ID de joueur&nbsp;(bcvideo_player)</strong><strong> </strong> - ID du joueur</li>
+      <li><strong>Nom de joueur&nbsp;(bcvideo_player_name)</strong><strong> </strong> - Nom de joueur</li>
+      <li><strong>Version du lecteur&nbsp;(bcvideo_platform_version)</strong> - Numéro de version du joueur</li>
+      <li><strong>Session&nbsp;(bcvideo_session)</strong><strong> </strong> - Identifiant de session</li>
+      <li><strong>ID vidéo&nbsp;(bcvideo_video)</strong><strong> </strong> - ID vidéo de la vidéo</li>
+      <li><strong>Nom de la vidéo&nbsp;(bcvideo_video_name)</strong> - Nom de la vidéo</li>
+      <li><strong>Intervalle&nbsp;(bcvideo_range)</strong><strong> </strong> - La plage de secondes affichée au format StartSecond..EndSecond</li>
+      <li><strong>Secondes vidéo affichées&nbsp;(bcvideo_video_seconds_viewé)</strong> - Nombre de secondes surveillées</li>
+      <li><strong>Durée de la vidéo&nbsp;(bcvideo_video_duration)</strong><strong> </strong> - La durée de la vidéo en secondes</li>
+      <li><strong>Pourcentage de vidéos vues&nbsp;(bcvideo_video_percent_viewé)</strong> - Pourcentage de vidéos regardées</li>
+      <li><strong>Code d'erreur&nbsp;(bcvideo_error_code)</strong><strong> </strong> - Code d'erreur spécifique à la plateforme associé à l'événement</li>
+    </ul>
+  </section>
+  <section class="bcls-section">
+    <h2 id="add_parameters">Création de variables de trafic dans Adobe Analytics</h2>
+    <p>Après avoir déterminé les paramètres à suivre, les variables de trafic doivent être créées dans Adobe Analytics. Pour créer des variables de trafic dans Adobe Analytics, procédez comme suit.</p>
+    <ol class="bcls-tasklist__restart">
+      <li>Connectez-vous à votre compte Adobe Analytics.</li>
+      <li>Sélectionnez une suite de rapports avec qui vous souhaitez travailler ou créez-en une nouvelle (<strong>Suites de &gt; rapports d'administration</strong>).</li>
+      <li>Cliquez sur <strong>Modifier les paramètres Variables de &gt; &gt; trafic</strong>.
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/admin/adobe-traffic-variables.png"/></figure>
+      </li>
+      <li>Entrez les informations sur le paramètre :
+        <ul>
+          <li><strong>Nom</strong> - Vous <strong>devez</strong> utiliser le nom <strong>bcvideo-</strong> indiqué dans la section précédente</li>
+          <li><strong>Description</strong> - Ajouter une description significative</li>
+        </ul>
+      </li>
+      <li>Créez une nouvelle variable de trafic pour chaque paramètre à suivre. Cliquez sur <strong>Enregistrer</strong> pour enregistrer les variables.</li>
+    </ol>
+    <p>L'image ci-dessous montre les variables de trafic créées pour chacun des paramètres Brightcove.</p>
+    <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/admin/adobe-traffic-vars-list.png"/></figure>
+  </section>
+  <section class="bcls-section">
+    <h2 id="enable">Activation de l'intégration</h2>
+    <p>Vous souhaiterez peut-être vous connecter à votre compte Adobe Analytics pour copier les informations nécessaires à partir de là vers l'application Brightcove Campaign. Pour configurer le suivi des événements Adobe Analytics, procédez comme suit:</p>
+    <ol class="bcls-tasklist__restart">
+      <li>Connectez-vous à Brightcove Campaign.</li>
+      <li>Dans l'en-tête de navigation, cliquez sur l'icône d'engrenage (<img class="bcls-image--no-border" alt="" src="/assets/images/admin/gear-icon.png"/> ) et alors <strong> Adobe Analytics</strong>.</li>
+      <li>Cochez <strong>Activer Adobe Analytics</strong>.</li>
+      <li>Saisissez les informations de votre compte Adobe.
+        <ul>
+          <li><strong>ID de suite de rapports</strong></li>
+          <li><strong>ID d'organisation Marketing Cloud</strong></li>
+          <li><strong>Serveur de suivi</strong></li>
+          <li><strong>CNAME activé</strong></li>
+          <li><strong>Espace de noms du visiteur</strong></li>
+        </ul>
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/admin/adobe-account-info.png"/></figure>
+      </li>
+      <li>Pour chaque événement que vous souhaitez suivre, entrez l'ID d'événement d'Adobe Analytics dans le champ correspondant à l'événement Brightcove. Dans cet exemple, lorsque l'événement <strong>bcvideo_player_load</strong> a été créé en tant qu'événement de réussite personnalisé dans Adobe Analytics, l'ID d'événement attribué était <strong>event7</strong>.
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/admin/adobe-player-load-event.png"/></figure>
+        <p>Il s'agit de la valeur qui doit être entrée dans le champ de l'événement <strong>Player Load (bcvideo_player_load)</strong> dans le module Players.</p>
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/admin/adobe-player-load-event-value.png"/></figure>
+      </li>
+      <li>Saisissez tous les ID d'événement d'Adobe Analytics dans le module Players selon vos besoins.</li>
+      <li>Cliquez sur <strong>Enregistrer</strong> pour enregistrer les mappages d'événements.</li>
+      <li>Pour chaque paramètre que vous souhaitez capturer, entrez le numéro de paramètre d'Adobe Analytics dans le champ correspondant pour le paramètre Brightcove en utilisant le format <strong>ProPX</strong> <strong>où X</strong> correspond à la <strong>propriété #</strong> dans Adobe Analytique. Dans cet exemple, une variable de trafic <strong>bcvideo-account</strong> a été créée dans Adobe Analytics pour contenir l'ID de compte Brightcove. Il a été assigné à la propriété # 1.
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/admin/adobe-param-account.png"/></figure>
+        <p>Par conséquent, <strong>prop1</strong> doit également être entré dans le champ correspondant pour le paramètre dans le module Joueurs.</p>
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/admin/adobe-param-account-value.png"/></figure>
+      </li>
+      <li>Entrez tous les noms de paramètres d'Adobe Analytics dans le module Players si nécessaire.</li>
+      <li>Cliquez sur <strong>Enregistrer</strong> pour enregistrer les mappages de paramètres.</li>
+    </ol>
+    <p><strong>Assurez-vous de publier les modifications sur le lecteur.</strong></p>
+  </section>
+  <section class="bcls-section">
+    <h2 id="configure_page">Configuration d'une page pour collecter des données</h2>
+    <p>Pour commencer à envoyer des données à Adobe Analytics, les données doivent être envoyées à une suite de rapports pour les afficher dans les rapports. Pour implémenter avec succès une page avec code pour collecter des données, vous devez avoir accès à vos serveurs d'hébergement pour télécharger du nouveau contenu sur votre site Web. Il est également utile d'avoir un site existant pour implémenter du code.</p>
+    <p>Les étapes suivantes sont décrites dans une implémentation de base d'Adobe Analytics.</p>
+    <ol class="bcls-tasklist__restart">
+      <li>Téléchargez <strong>AppMeasurement</strong> pour JavaScript et le service <strong>Visitor ID</strong> . Le téléchargement est disponible dans le Gestionnaire de code (<strong>Analytics &gt; Admin &gt; Code Manager</strong>). Le zip de téléchargement contient plusieurs fichiers. <code translate="No">AppMeasurement.js</code> et <code translate="No">VisitorAPI.js</code> sont les fichiers pertinents lors de l'implémentation d'Analytics.</li>
+      <li>Hôte&nbsp;<code translate="No">AppMeasurement.js</code>&nbsp;et&nbsp;<code translate="No">VisitorAPI.js</code>. Ces fichiers JavaScript principaux doivent être hébergés sur un serveur Web accessible à toutes les pages de votre site. Vous avez besoin du chemin d'accès à ces fichiers lorsque vous les ajoutez à vos pages.</li>
+      <li>Reference&nbsp;<code translate="No">AppMeasurement.js</code>&nbsp;et&nbsp;<code translate="No">VisitorAPI.js</code>&nbsp;sur toutes les pages du site avec un Brightcove Player en ajoutant les lignes de code suivantes dans le&nbsp;<code translate="No">&lt;head&gt;</code>&nbsp;ou <code translate="No">&lt;body&gt;</code> balise sur chaque page. <code translate="No">VisitorAPI.js</code>&nbsp;doit être inclus avant&nbsp;<code translate="No">AppMeasurement.js</code>.
+        <pre>
+  &lt;script&nbsp;language="JavaScript »&nbsp;type="text/javascript »&nbsp; src= » https://Insert Domaine et chemin d'accès au fichier here/VisitorAPI.js "&gt; &lt; /script &gt;
+  &lt;script&nbsp;language="JavaScript »&nbsp;type="text/javascript »&nbsp; src= » https://Insert Domaine et chemin d'accès au fichier here/AppMeasurement.js "&gt; &lt; /script &gt;</pre>
+      </li>
+    </ol>
+  </section>
+  <section class="bcls-section">
+    <h2 id="confirm">Confirmation de la configuration</h2>
+    <p>Pour confirmer que les données d'événement Brightcove sont capturées dans Adobe Analytics, procédez comme suit.</p>
+    <ol class="bcls-tasklist__restart">
+      <li>Connectez-vous à votre compte Adobe Analytics.</li>
+      <li>Cliquez sur <strong>Rapports</strong>.</li>
+      <li>Cliquez sur <strong>Mesures de site en &gt; temps réel</strong>.</li>
+      <li>Vérifiez que la suite de rapports correcte est sélectionnée.
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/admin/adobe-confirm-report-suite.png"/></figure>
+      </li>
+      <li>Cliquez sur <strong>Configurer</strong>.</li>
+      <li>Saisissez un <strong>nom de rapport</strong>.</li>
+      <li>Pour la <strong>mesure</strong>, la <strong>dimension principale et la dimension</strong> <strong>secondaire</strong>, sélectionnez Événements Brightcove que vous avez configurés en tant qu' <a href="#add_events">événements de réussite</a> dans Adobe Analytics. Les événements doivent apparaître dans la liste.
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/admin/adobe-report-select-event.png"/></figure>
+      </li>
+      <li>Sélectionnez d'autres événements pour remplir les dimensions.
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/admin/adobe-report-defined.png"/></figure>
+      </li>
+      <li>Cliquez sur <strong>Enregistrer et afficher le rapport</strong>.</li>
+      <li>Vérifiez que les données attendues apparaissent dans le rapport.
+        <figure class="bcls-figure"><img class="bcls-image--no-border" alt="" src="/assets/images/admin/adobe-report.png"/></figure>
+      </li>
+    </ol>
+    <p>Si les données n'apparaissent pas, vérifiez que les URL vers le &nbsp;<code translate="No">AppMeasurement.js</code>&nbsp;et&nbsp;<code translate="No">VisitorAPI.js</code>&nbsp;les fichiers sont valides. Vérifiez la console du navigateur pour vous assurer qu'aucune erreur 404 n'apparaît. En outre, les bloqueurs d'annonces peuvent empêcher l'envoi de données à Adobe Analytics.</p>
+  </section>
+</article>
+</body>
+</html>
+
+<!-- complete bootstrap layout -->
+    </div>
+    <div class="col-sm-2 right-side-bar">
+      
+      <nav class="right-side-nav" id="right_side_nav">
+        <h6 class="toc">Contenu de la page</h6>
+        <ul id="in_page_nav" class="list-none"></ul>
+      </nav>
+      
+    </div>
+  </div>
+</div>
+
+<hr>
+<div class="last-updated">
+  Page mise à jour le 06 oct. 2020
+</div>
+
+
+
+<footer class="bcls-footer" role="contentinfo">
+  <div class="row">
+    <div class="region region-footer-top-center col-md-12">
+      <nav role="navigation" aria-labelledby="block-brightcovesupport-menu" id="block-brightcovesupport" class="footer-menu">
+
+        <h2>Assistance Brightcove</h2>
+
+        <ul class="menu">
+          <li>
+            <a href="https://status.brightcove.com">État du système</a>
+          </li>
+          <li>
+            <a href="https://supportportal.brightcove.com/s/login/?">Contacter le support</a>
+          </li>
+          <li>
+            <a href="https://support.brightcove.com/">Documentation</a>
+          </li>
+        </ul>
+
+      </nav>
+      <nav role="navigation" aria-labelledby="block-training-menu" id="block-training" class="footer-menu">
+
+        <h2>Formation</h2>
+
+        <ul class="menu">
+          <li>
+            <a href="https://studio.support.brightcove.com/training/online-training-courses.html">Cours en ligne</a>
+          </li>
+          <li>
+            <a href="https://studio.support.brightcove.com/training/register-training.html">S' inscrire à un cours</a>
+          </li>
+          <li>
+            <a href="https://university.brightcove.com/">Université de Brightcove</a>
+          </li>
+        </ul>
+
+      </nav>
+      <nav role="navigation" aria-labelledby="block-brightcove-menu" class="footer-menu">
+
+        <h2>Brightcove</h2>
+
+        <ul class="menu">
+          <li>
+            <a href="https://www.brightcove.com">BrightCove.com</a>
+          </li>
+          <li>
+            <a href="https://supportportal.brightcove.com/s/login/?">Contactez-nous</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+  <div class="row">
+    <div class="region region-footer-bottom-center col-md-12">
+      <div class="bcls-copyright footer-menu">
+        <table>
+          <tr>
+            <td>
+              <div id="bc_copyright" class="field field--name-field-copyright-year field--type-string field--label-hidden field--item" style="float: left;"> Brightcove, Inc. Tous droits réservés.</div>
+            </td>
+            <td><a href="https://www.brightcove.com/en/legal/privacy">Confidentialité</a> | <a href="https://www.brightcove.com/en/terms-and-conditions">Termes et conditions</a></td>
+            <td>
+              <div class="gf-links-cols footer-menu">
+                <div class="gf-social"><a href="https://www.linkedin.com/company/16439" title="LinkedIn" newtab="newtab" class="gf-social-linkedin"><i class="fab fa-linkedin-in" style="font-size: 1.5rem;"></i></a><a href="https://twitter.com/brightcove" title="Twitter" newtab="newtab" class="gf-social-twitter"><i class="fab fa-twitter" style="font-size: 1.5rem;"></i></a><a href="https://www.facebook.com/Brightcove" title="Facebook" newtab="newtab" class="gf-social-facebook"><i class="fab fa-facebook-f" style="font-size: 1.5rem;"></i></a>
+                </div>
+              </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+</footer>
+<div id="talla_wrapper">
+  <p style="text-align: right;position: relative;"><button style="background:rgb(2, 28, 146);color:Snow;padding:.3rem;position:fixed;right:0;bottom:1em;z-index:9999999" onclick="javascript:displayChat()">Avez-vous des questions ? </button> </p>
+  <div id="talla_chat">
+</div>
+</div>
+<script>
+      
+  var searchBox = sajari.init({
+    mode: "search-box",
+    project: "1588255093746585379", // Set this to your project.
+    collection: "brightcove-documenation", // Set this to your collection.
+    instantPipeline: "autocomplete", // Pipeline used as you type
+    inputPlaceholder: "Search", // Input element placeholder
+    maxSuggestions: 5, // Maximum number of suggestions to show
+    attachSearchBox: document.getElementById("nav-search-box") // DOM element to attach to
+  });
+  
+    searchBox("sub", "pipeline.search-sent", function (_, query) {
+      window.location = "/search.html?q=" + encodeURIComponent(query.q);
+    });
+  
+
+</script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <script src="https://support.brightcove.com/site-assets/js/site/https-fix.js"></script>
+  <script src="https://support.brightcove.com/site-assets/js/site/setDate.js"></script>
+  
+  <script src="https://support.brightcove.com/site-assets/js/site/prism.js"></script>
+  
+  <script src="https://support.brightcove.com/site-assets/js/site/site.js"></script>
+  <script src="https://support.brightcove.com/site-assets/js/site/tabs.js"></script>
+  <script src="https://support.brightcove.com/site-assets/js/site/toc.js"></script>
+  <script src="/assets/js/sites_nav.js"></script>
+  <script src="https://support.brightcove.com/site-assets/js/site/bcls-utils.js"></script>
+  <script src="https://support.brightcove.com/site-assets/js/site/local-link-fix.js"></script>
+  <script src="/assets/js/feedback.js"></script>
+  
+  <script src="/assets/js/sajari-search-foot.js"></script>
+  
+  <!-- <script src="/assets/js/sajari-index.js"></script> -->
+  <script src="https://assets.talla.com/latest/embeddedjs/talla.js"></script>
+  <script src="/assets/js/talla-init.js"></script>
+  <style>
+    a.sj-paginator__page-number.sj-paginator__page-number--current.css-so0ov7 {
+      background-color: lightblue;
+    }
+    div.sj-tabs__tab {
+      margin-top: 3rem;
+      margin-left: .3rem;
+      border-top-left-radius: .4rem;
+      border-top-right-radius: .4rem;
+      background-color:#e8e8e8;
+    }
+
+    div.sj-tabs__tab.sj-tabs__tab--selected {
+      border-bottom-color: crimson;
+      background-color: #f8f8f8;
+    }
+
+    p.sj-results__result__description.css-p9jvyt {
+      font-size: 1rem;
+    }
+
+    .sj-result__text.css-31l7gp h3 {
+      color: navy;
+      font-size: 1.4rem;
+    }
+    </style>
+
+</body>
+
+</html>
