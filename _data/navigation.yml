@@ -1,0 +1,133 @@
+- section: 
+  name: Accueil
+  url: /index.html
+- section: 
+  name: Pour commencer
+  url: /get-started/index.html
+  docs:
+    - name: Vidéos de formation de campagne
+      url: /get-started/brightcove-campaign-training-videos.html
+    - name: Commencer avec la campagne Brightcove
+      url: /get-started/getting-started-brightcove-campaign.html
+    - name: Démarrer avec votre essai de campagne Brightcove
+      url: /get-started/getting-started-brightcove-campaign-trial.html
+    - name: Présentation des types de contenu vidéo
+      url: /get-started/overview-video-content-types.html
+    - name: Téléchargement et publication de votre première vidéo
+      url: /get-started/uploading-publishing-your-first-video.html
+- section: 
+  name: Gestion des vidéos
+  url: /videos/index.html
+  docs:
+    - name: Ajout de pistes de texte
+      url: /videos/adding-text-tracks-to-a-video.html
+    - name: Capture d'affiches et d'images miniatures
+      url: /videos/capturing-poster-and-thumbnail-images.html
+    - name: Conduite des vues vidéo par e-mail
+      url: /videos/driving-video-views-email.html
+    - name: Modification des propriétés vidéo
+      url: /videos/editing-video-properties.html
+    - name: Gestion des vidéos
+      url: /videos/managing-videos.html
+    - name: Publication de vidéos
+      url: /videos/publishing-videos.html
+    - name: Rechercher des vidéos
+      url: /videos/how-to-search-for-videos.html
+    - name: Téléchargement d'affiches et d'images miniatures
+      url: /videos/uploading-poster-and-thumbnail-images.html
+    - name: Téléchargement de vidéos
+      url: /videos/uploading-videos.html
+    - name: Utilisation des vidéos partagées
+      url: /videos/working-with-shared-videos.html
+- section: 
+  name: Examen du tableau de bord
+  url: /dashboard/index.html
+  docs:
+    - name: Vue d'ensemble des
+      url: /dashboard/dashboard-overview.html
+    - name: Examen du tableau de bord avancé
+      url: /dashboard/reviewing-adv-dashboard.html
+    - name: Consulter le tableau de bord de base
+      url: /dashboard/reviewing-basic-dashboard.html
+- section: 
+  name: Examen de Analytics
+  url: /analytics/index.html
+  docs:
+    - name: Comment le score de référence vidéo est calculé
+      url: /analytics/how-vbs-calculated.html
+    - name: Examen de Video Analytics
+      url: /analytics/reviewing-video-analytics.html
+    - name: Utilisation de l'extension Chrome d'affichage tête haute
+      url: /analytics/using-hud.html
+- section: 
+  name: Administration des comptes
+  url: /admin/index.html
+  docs:
+    - name: Configuration d'Adobe Analytics
+      url: /admin/configuring-adobe-analytics-event-tracking.html
+    - name: Configuration de Google Analytics
+      url: /admin/configuring-google-analytics-event-tracking.html
+    - name: Configuration des connexions MAP
+      url: /admin/configuring-map-connections.html
+    - name: Connexion à HubSpot (API côté client)
+      url: /admin/connecting-to-hubspot-client-side-api.html
+    - name: Connexion à HubSpot (API REST)
+      url: /admin/connecting-to-hubspot-rest-api.html
+    - name: Connexion à Marketo (Munchkin)
+      url: /admin/connecting-to-marketo-munchkin.html
+    - name: Connexion à Marketo (API REST)
+      url: /admin/connecting-to-marketo-rest-api.html
+    - name: Connexion à Oracle Eloqua
+      url: /admin/connecting-to-oracle-eloqua.html
+    - name: Connexion à Salesforce
+      url: /admin/connecting-to-salesforce.html
+    - name: Création d'un objet Salesforce pour Pardot
+      url: /admin/creating-salesforce-object-pardot.html
+    - name: Création de formulaires de prospectes
+      url: /admin/creating-lead-forms.html
+    - name: Création de formulaires de prospect dans HubSpot
+      url: /admin/creating-lead-forms-hubspot.html
+    - name: Création de formulaires de prospecte dans Marketo
+      url: /admin/creating-lead-forms-marketo.html
+    - name: Création de formulaires de prospecte dans Oracle Eloqua
+      url: /admin/creating-lead-forms-oracle-eloqua.html
+    - name: Création de formulaires de prospecs dans Salesforce
+      url: /admin/creating-lead-forms-salesforce.html
+    - name: Gestion des informations de compte
+      url: /admin/managing-account-information.html
+    - name: Gestion des paramètres du compte
+      url: /admin/managing-account-settings.html
+    - name: Gestion des paramètres de partage multimédia
+      url: /admin/managing-media-sharing-settings.html
+    - name: Gestion des informations de profil
+      url: /admin/managing-profile-information.html
+    - name: Gestion des utilisateurs
+      url: /admin/managing-users.html
+    - name: Styling Joueurs
+      url: /admin/styling-players.html
+    - name: Vérification des données d'événements du joueur dans Google Analytics
+      url: /admin/reviewing-player-event-data-in-google-analytics.html
+    - name: Affichage des informations de facturation
+      url: /admin/viewing-billing-information.html
+- section: 
+  name: Notes de version
+  url: /release-notes/index.html
+  docs:
+    - name: Notes de version de la campagne Brightcove
+      url: /release-notes/campaign-release-notes.html
+- section: 
+  name: Assistance
+  url: /support/index.html
+  docs:
+    - name: 'Affichage de la page État du système Brightcove'
+      url: '/support/viewing-brightcove-system-status-page.html'
+    - name: 'Contactez le service commercial'
+      url: '/support/contact-sales.html'
+    - name: 'Ouverture d'un dossier de support'
+      url: '/support/opening-case-with-brightcove-support.html'
+    - name: 'Réinitialiser le mot de passe du portail'
+      url: '/support/reset-support-portal-password.html'
+
+# TODO correct and add additional sections/pages
+# TODO note that the order of items here determines the order in navigation
+# TODO indentation in YAML is crucial and must be with spaces (not tabs!)
